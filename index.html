@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hernán Sartorelli | Consultoría y formación en Delivery, Agilidad e IA</title>
+  <meta name="description" content="Consultoría y formación para mejorar delivery, agilidad, gestión de proyectos e incorporación práctica de Inteligencia Artificial en organizaciones." />
+  <meta property="og:title" content="Hernán Sartorelli | Delivery, Agilidad e IA aplicada" />
+  <meta property="og:description" content="Consultoría y formación para organizaciones que necesitan ejecutar mejor, ordenar prioridades y adoptar IA con criterio." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0E1220;
+      --bg-soft:#151B2C;
+      --card:#1A2236;
+      --text:#F4F1EA;
+      --muted:#BAC1D4;
+      --muted-2:#8992AD;
+      --gold:#C9A34E;
+      --gold-soft:#E5CC8D;
+      --teal:#4D9B91;
+      --line:rgba(201,163,78,.18);
+      --shadow:0 24px 80px rgba(0,0,0,.28);
+      --serif:'Fraunces', serif;
+      --sans:'Inter', sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+    .skip{position:absolute;left:-999px}.skip:focus{left:20px;top:20px;background:var(--gold);color:var(--bg);padding:10px;z-index:100}
+    header{position:sticky;top:0;z-index:40;background:rgba(14,18,32,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:17px 0;gap:22px}
+    .brand{font-family:var(--serif);font-size:19px;letter-spacing:.01em}.brand span{color:var(--gold-soft)}
+    .nav-links{display:flex;gap:24px;color:var(--muted);font-size:14px}.nav-links a:hover{color:var(--gold-soft)}
+    .nav-cta{border:1px solid var(--gold);color:var(--gold-soft);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600}.nav-cta:hover{background:var(--gold);color:var(--bg)}
+    .hero{padding:92px 0 76px;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;right:-12%;top:0;width:44%;height:90%;background:radial-gradient(circle, rgba(77,155,145,.25), transparent 64%);pointer-events:none}
+    .eyebrow{color:var(--gold-soft);font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:800;margin-bottom:18px}
+    h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;line-height:1.14}
+    h1{font-size:clamp(38px,6vw,68px);max-width:900px;margin-bottom:24px}
+    .lead{font-size:19px;color:var(--muted);max-width:700px;margin-bottom:34px}
+    .cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:42px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 22px;font-size:15px;font-weight:700;transition:.18s ease}
+    .btn-primary{background:var(--gold);color:var(--bg)}.btn-primary:hover{background:var(--gold-soft);transform:translateY(-1px)}
+    .btn-secondary{border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.03)}.btn-secondary:hover{border-color:var(--gold);color:var(--gold-soft)}
+    .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .trust div{background:rgba(21,27,44,.9);padding:22px}.trust b{display:block;font-size:22px;color:var(--gold-soft);margin-bottom:4px}.trust span{font-size:13px;color:var(--muted)}
+    section{padding:82px 0}.alt{background:var(--bg-soft)}
+    .section-head{display:flex;justify-content:space-between;gap:36px;align-items:end;margin-bottom:34px}.section-head h2{font-size:clamp(28px,3.8vw,42px);max-width:680px}.section-head p{color:var(--muted);max-width:410px}
+    .paths{display:grid;grid-template-columns:1fr 1fr;gap:22px}.path{background:var(--card);border:1px solid var(--line);padding:34px;border-radius:22px;min-height:380px}.path h3{font-size:29px;margin:10px 0 14px}.path p{color:var(--muted);margin-bottom:22px}.path ul{list-style:none;display:grid;gap:12px;margin:22px 0}.path li{color:var(--muted);padding-left:22px;position:relative}.path li:before{content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;background:var(--teal);border-radius:50%}.tag{display:inline-block;color:var(--gold-soft);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:18px;padding:26px}.service h3{font-size:21px;margin-bottom:10px}.service p{color:var(--muted);font-size:15px}
+    .method{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{border-top:1px solid var(--gold);padding-top:22px}.step b{color:var(--gold-soft);font-size:13px}.step h3{font-size:20px;margin:8px 0}.step p{font-size:14px;color:var(--muted)}
+    .cases{display:grid;grid-template-columns:1fr 1fr;gap:18px}.case{background:var(--bg);border:1px solid var(--line);padding:28px;border-radius:18px}.case h3{font-size:22px;margin-bottom:10px}.case p{color:var(--muted)}
+    .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}.about-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}.about-card b{display:block;color:var(--gold-soft);margin-bottom:5px}.about-card span{color:var(--muted);font-size:14px}.about-text p{color:var(--muted);margin-bottom:16px}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.chip{border:1px solid var(--line);color:var(--muted);padding:8px 11px;border-radius:999px;font-size:13px}
+    .cta-box{border:1px solid var(--gold);border-radius:24px;padding:44px;background:linear-gradient(135deg, rgba(201,163,78,.08), rgba(77,155,145,.06));display:flex;justify-content:space-between;align-items:center;gap:28px}.cta-box h2{font-size:clamp(26px,3.6vw,40px);max-width:680px}.contact{color:var(--muted);font-size:15px;margin-top:14px}.contact a{color:var(--gold-soft)}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted-2);font-size:13px;text-align:center}
+    @media(max-width:860px){.nav-links{display:none}.trust,.paths,.services,.method,.cases,.about{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:14px}.cta-box{display:block}.cta-box .btn{margin-top:24px}.hero{padding-top:70px}.trust div{padding:18px}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+  <div class="wrap">
+    <nav aria-label="Navegación principal">
+      <a class="brand" href="#">Hernán <span>Sartorelli</span></a>
+      <div class="nav-links">
+        <a href="#consultoria">Consultoría</a>
+        <a href="#formacion">Formación</a>
+        <a href="#metodo">Método</a>
+        <a href="#experiencia">Experiencia</a>
+      </div>
+      <a class="nav-cta" href="mailto:hsartorelli@gmail.com">Hablemos</a>
+    </nav>
+  </div>
+</header>
+<main id="contenido">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Delivery · Agilidad · IA aplicada</div>
+      <h1>Ayudo a organizaciones y equipos a ejecutar mejor, trabajar con más foco y adoptar IA con criterio.</h1>
+      <p class="lead">Consultoría y formación para convertir problemas de coordinación, prioridades dispersas y nuevas tecnologías en cambios concretos de trabajo.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:hsartorelli@gmail.com?subject=Consulta%20por%20servicios%20-%20Hern%C3%A1n%20Sartorelli">Coordinar una conversación</a>
+        <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+      </div>
+      <div class="trust" aria-label="Indicadores de experiencia">
+        <div><b>15+ años</b><span>en tecnología, delivery y transformación</span></div>
+        <div><b>12+ años</b><span>de experiencia docente y formación</span></div>
+        <div><b>1.000+</b><span>profesionales capacitados</span></div>
+        <div><b>50+</b><span>workshops y sesiones facilitadas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Dos líneas de trabajo, un mismo foco: mejorar la capacidad de acción.</h2>
+        <p>La propuesta separa claramente consultoría y formación, pero ambas apuntan a lo mismo: que las personas y organizaciones puedan decidir, priorizar y ejecutar mejor.</p>
+      </div>
+      <div class="paths">
+        <article id="consultoria" class="path">
+          <span class="tag">Línea 1</span>
+          <h3>Consultoría</h3>
+          <p>Para organizaciones que necesitan ordenar el delivery, mejorar la coordinación entre áreas o empezar a usar IA de manera práctica.</p>
+          <ul>
+            <li>Diagnóstico de ejecución, delivery y formas de trabajo.</li>
+            <li>Gobernanza, priorización, roadmap y gestión de dependencias.</li>
+            <li>Agilidad aplicada a contextos reales, sin recetas rígidas.</li>
+            <li>Adopción de IA: casos de uso, pilotos y acompañamiento del cambio.</li>
+          </ul>
+          <a class="btn btn-secondary" href="mailto:hsartorelli@gmail.com?subject=Consulta%20por%20consultor%C3%ADa">Consultar por consultoría</a>
+        </article>
+        <article id="formacion" class="path">
+          <span class="tag">Línea 2</span>
+          <h3>Formación</h3>
+          <p>Para empresas, universidades y profesionales que buscan desarrollar capacidades concretas en agilidad, gestión, liderazgo e IA aplicada.</p>
+          <ul>
+            <li>Talleres y cursos de IA práctica para profesionales y equipos.</li>
+            <li>Agilidad, Scrum, Kanban, métricas y nuevas formas de trabajo.</li>
+            <li>Gestión de proyectos, producto, stakeholders y delivery.</li>
+            <li>Liderazgo, facilitación, feedback y gestión del cambio.</li>
+          </ul>
+          <a class="btn btn-secondary" href="mailto:hsartorelli@gmail.com?subject=Consulta%20por%20formaci%C3%B3n">Consultar por formación</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Servicios concretos</h2>
+        <p>No vendo frameworks. Trabajo sobre problemas reales: foco, flujo, coordinación, adopción y aprendizaje.</p>
+      </div>
+      <div class="services">
+        <article class="service"><h3>Mejora de delivery</h3><p>Ordenar prioridades, dependencias, gestión de demanda, riesgos, métricas de flujo y mecanismos de seguimiento.</p></article>
+        <article class="service"><h3>Agilidad organizacional</h3><p>Diagnóstico, diseño de formas de trabajo, acompañamiento a líderes, Product Owners y equipos.</p></article>
+        <article class="service"><h3>IA aplicada</h3><p>Identificación de casos de uso, diseño de pilotos, formación y adopción práctica en el trabajo cotidiano.</p></article>
+        <article class="service"><h3>Workshops estratégicos</h3><p>Espacios de alineamiento, priorización, retrospectivas, planificación y toma de decisiones con equipos grandes.</p></article>
+        <article class="service"><h3>Cursos corporativos</h3><p>Programas a medida para instalar capacidades en agilidad, delivery, liderazgo, producto e IA.</p></article>
+        <article class="service"><h3>Mentoring</h3><p>Acompañamiento individual o grupal para líderes, PMs, POs, Scrum Masters y profesionales en reconversión.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="metodo" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Cómo trabajo</h2>
+        <p>Simple, práctico y orientado a resultados visibles. Primero el problema, después la herramienta.</p>
+      </div>
+      <div class="method">
+        <div class="step"><b>01</b><h3>Entender</h3><p>Contexto, objetivos, fricciones y restricciones reales.</p></div>
+        <div class="step"><b>02</b><h3>Enfocar</h3><p>Priorización de problemas y oportunidades de mayor impacto.</p></div>
+        <div class="step"><b>03</b><h3>Diseñar</h3><p>Intervención a medida: diagnóstico, workshop, programa o acompañamiento.</p></div>
+        <div class="step"><b>04</b><h3>Instalar</h3><p>Prácticas simples para que el cambio quede en la operación.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Experiencia que combina tecnología, negocio y personas</h2>
+        <p>Vengo del mundo técnico, pasé por gestión de proyectos, producto, delivery, agilidad, transformación y formación.</p>
+      </div>
+      <div class="cases">
+        <article class="case"><h3>Banca y transformación</h3><p>Acompañamiento de tribus y gerencias, modelos de madurez, métricas de flujo, governance de delivery y coordinación negocio-tecnología.</p></article>
+        <article class="case"><h3>Retail y rollout nacional</h3><p>Liderazgo de implementaciones, capacitación, UAT, soporte post go-live y coordinación de múltiples sucursales y áreas.</p></article>
+        <article class="case"><h3>Consultoría corporativa</h3><p>Programas de transformación ágil para clientes de Finanzas, Energía y Tecnología, con modelos adaptados al contexto.</p></article>
+        <article class="case"><h3>Docencia y formación</h3><p>Más de 12 años formando profesionales en tecnología, agilidad, liderazgo, gestión e Inteligencia Artificial aplicada.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap about">
+      <aside class="about-card" aria-label="Perfil resumido">
+        <b>Hernán Sartorelli</b>
+        <span>Delivery & Transformation Leader</span><br><br>
+        <span>Buenos Aires, Argentina</span><br>
+        <span><a href="mailto:hsartorelli@gmail.com">hsartorelli@gmail.com</a></span><br>
+        <span><a href="https://linkedin.com/in/hernansartorelli" target="_blank" rel="noopener">linkedin.com/in/hernansartorelli</a></span>
+      </aside>
+      <div class="about-text">
+        <div class="eyebrow">Sobre mí</div>
+        <h2>Tengo una mirada de ejecución, pero con sensibilidad por el cambio.</h2>
+        <p>Mi carrera comenzó en desarrollo de software e implementación de sistemas. Con los años evolucioné hacia gestión de proyectos, producto, delivery, agilidad y transformación organizacional.</p>
+        <p>Esa combinación me permite trabajar en distintos niveles: entender conversaciones técnicas, facilitar decisiones entre áreas, acompañar líderes y ayudar a los equipos a mejorar su forma de entregar valor.</p>
+        <p>Hoy también trabajo en Inteligencia Artificial aplicada, especialmente en productividad, gestión, desarrollo de productos, educación y nuevas formas de trabajo.</p>
+        <div class="chips">
+          <span class="chip">Project Management</span><span class="chip">Agile Coaching</span><span class="chip">Delivery</span><span class="chip">Change Management</span><span class="chip">IA aplicada</span><span class="chip">Formación</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <div class="cta-box">
+        <div>
+          <h2>¿Hay algo que en tu organización debería estar funcionando mejor?</h2>
+          <p class="contact">Escribime a <a href="mailto:hsartorelli@gmail.com">hsartorelli@gmail.com</a> o contactame por <a href="https://linkedin.com/in/hernansartorelli" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        </div>
+        <a class="btn btn-primary" href="mailto:hsartorelli@gmail.com?subject=Consulta%20por%20servicios">Hablemos</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">© 2026 Hernán Sartorelli · Consultoría y formación en Delivery, Agilidad e IA aplicada</div>
+</footer>
+</body>
+</html>
